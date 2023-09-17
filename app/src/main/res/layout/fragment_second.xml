@@ -57,7 +57,21 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/user_bio"
-        android:inputType="textPersonName"
+        android:inputType="textMultiLine"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextGithubHandle" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        app:layout_constraintBottom_toTopOf="@+id/button_second"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextUserBio"
+        app:layout_constraintVertical_bias="0.971" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

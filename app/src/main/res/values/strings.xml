@@ -15,4 +15,5 @@
     <string name="slack_username">Slack username</string>
     <string name="github_handle">Github handle</string>
     <string name="user_bio">User bio</string>
+    <string name="save">SAVE</string>
 </resources>

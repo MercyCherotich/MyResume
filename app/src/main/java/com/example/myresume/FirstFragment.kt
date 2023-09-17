@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import com.example.myresume.data.User
 import com.example.myresume.data.UserApplication
 import com.example.myresume.data.UserRoomDatabase
 import com.example.myresume.data.UserDao
@@ -47,6 +48,11 @@ class FirstFragment : Fragment() {
         binding.buttonFirst.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
+        val name = binding.textviewName.text.toString()
+        val slack_username = binding.textViewSlack.text.toString()
+        val github_handle = binding.textViewGithub.text.toString()
+        val user_bio = binding.textViewBio.text.toString()
+        val user: User = User(1,name, slack_username, github_handle, user_bio)
     }
 
     override fun onDestroyView() {
