@@ -9,13 +9,13 @@ interface UserDao {
     @Query("SELECT * FROM user")
     fun getAll(): Flow<List<User>>
 
-    @Query("SELECT * FROM user LIMIT 1")
-    fun getUser(): Flow<User>
+    @Query("SELECT * FROM user WHERE uid=1")
+    fun getUser(): User
 
     @Query("SELECT * FROM user WHERE full_name LIKE :full_name LIMIT 1")
     fun findByName(full_name: String): LiveData<User>
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertUser( user: User)
 
     @Update

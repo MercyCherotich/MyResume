@@ -5,7 +5,7 @@ import com.example.myresume.data.User
 import kotlinx.coroutines.launch
 
 class UserViewModel(private val repository: UserRepository) : ViewModel() {
-    val user: LiveData<User> = repository.user.asLiveData()
+    val user: User = repository.user
 
     fun insert(user: User) = viewModelScope.launch {
         repository.insert(user)
